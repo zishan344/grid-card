@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,600;1,400&display=swap");
+/* global styel */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* header part */
+.title-1 {
+  margin-top: 10px;
+  font-weight: 200;
+}
+.title-1,
+.title-2,
+.title-description {
+  text-align: center;
+}
+
+.cards {
+  margin-top: 50px;
+  margin-bottom: 20px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 20px;
+  grid-template-areas:
+    "one two three"
+    "one fourth three";
+}
+.card-content {
+  padding: 30px 25px;
+  box-shadow: 1px 9px 27px -8px rgb(0 0 0 / 75%);
+}
+
+.card-1 {
+  grid-area: one;
+
+  align-self: center;
+}
+.card-2 {
+  grid-area: two;
+
+  align-self: center;
+}
+.card-3 {
+  grid-area: three;
+
+  align-self: center;
+}
+.card-4 {
+  grid-area: fourth;
+
+  align-self: center;
+}
+
+.images {
+  display: flex;
+  justify-content: end;
+}
+
+/* media query */
+@media only screen and (max-width: 450px) {
+  body {
+    font-size: 15px;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "fourth";
+  }
+}
+@media only screen and (max-width: 895px) and (min-width: 451px) {
+  body {
+    font-size: 15px;
+  }
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "one two"
+      "three fourth";
+  }
+}
